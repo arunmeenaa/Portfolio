@@ -16,7 +16,6 @@ function Navbar() {
           <h2 className="font-bold flex font-montserrat">Arun</h2>
         </div>
 
-       
         <ul className="hidden md:flex items-center gap-6 pr-6">
           <li><a href="#home" className="hover:text-blue-500">Home</a></li>
           <li><a href="#about" className="hover:text-blue-500">About</a></li>
@@ -25,7 +24,6 @@ function Navbar() {
           <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
         </ul>
 
-        
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col gap-1 pr-4"
@@ -37,15 +35,17 @@ function Navbar() {
       </div>
 
       
-      {menuOpen && (
-        <ul className="md:hidden flex flex-col gap-4 bg-white shadow-md p-4 pt-16 mt-[60px] border-t">
-          <li><a href="#home" className="hover:text-blue-500">Home</a></li>
-          <li><a href="#about" className="hover:text-blue-500">About</a></li>
-          <li><a href="#project" className="hover:text-blue-500">Projects</a></li>
-          <li><a href="#experience" className="hover:text-blue-500">Experience</a></li>
-          <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
-        </ul>
-      )}
+      <ul
+        className={`md:hidden flex flex-col gap-4 bg-white shadow-md p-4 border-t fixed top-14 left-0 w-full z-40 transform transition-transform duration-300 ease-in-out ${
+          menuOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <li><a href="#home" className="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" className="hover:text-blue-500">About</a></li>
+        <li><a href="#project" className="hover:text-blue-500">Projects</a></li>
+        <li><a href="#experience" className="hover:text-blue-500">Experience</a></li>
+        <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
+      </ul>
     </div>
   );
 }
