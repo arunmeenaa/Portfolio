@@ -11,38 +11,14 @@ import sql from "../../public/sql.png";
 
 function Experience() {
   const cardItem = [
-    {  id: 1,
-       logo: html,
-       name: "HTML"
-      },
-    { id: 2,
-      logo: css,
-      name: "CSS"
-    },
-    { id: 3,
-      logo: javascript,
-      name: "JavaScript" 
-    },
-    { id: 4,
-      logo: nodejs,
-      name: "NodeJS"
-    },
-    { id: 5,
-      logo: c,
-      name: "C" 
-    },
-    { id: 6,
-      logo: cc,
-      name: "C++" 
-    },
-    { id: 7,
-      logo: java,
-      name: "Java" 
-    },
-    { id: 8,
-      logo: sql,
-      name: "SQL" 
-    },
+    { id: 1, logo: html, name: "HTML" },
+    { id: 2, logo: css, name: "CSS" },
+    { id: 3, logo: javascript, name: "JavaScript" },
+    { id: 4, logo: nodejs, name: "NodeJS" },
+    { id: 5, logo: c, name: "C" },
+    { id: 6, logo: cc, name: "C++" },
+    { id: 7, logo: java, name: "Java" },
+    { id: 8, logo: sql, name: "SQL" },
   ];
 
   return (
@@ -53,11 +29,11 @@ function Experience() {
       <div>
         <h1 className="text-3xl font-bold mb-5">Experience</h1>
         <span>I have more than 2 years of experience in the below Technologies</span>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-7 my-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-7 my-3 justify-items-center">
           {cardItem.map(({ id, logo, name }, index) => (
             <motion.div
               key={id}
-              className="flex flex-col items-center justify-center md:w-[200px] md:h-[200px] border-[2px] rounded-full p-1 cursor-pointer hover:scale-105 duration-300"
+              className="flex flex-col items-center justify-center w-36 h-36 sm:w-40 sm:h-40 md:w-[200px] md:h-[200px] border-[2px] rounded-full p-1 cursor-pointer hover:scale-105 duration-300"
               initial={{ opacity: 0, scale: 0.8, y: 50 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -65,10 +41,10 @@ function Experience() {
             >
               <img
                 src={logo}
-                className="w-[150px] p-1 rounded-full"
+                className="w-20 sm:w-28 md:w-[150px] p-1 rounded-full"
                 alt={name}
               />
-              <div className="font-semibold">{name}</div>
+              <div className="font-semibold text-center mt-2">{name}</div>
             </motion.div>
           ))}
         </div>
