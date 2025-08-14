@@ -1,14 +1,46 @@
 import React from "react";
 import soonn from "../../public/soonn.png";
+import spotify from "../../public/favicon.ico";
 import { motion } from "framer-motion";
 
 function Project() {
   const cardItem = [
-    { id: 1, logo: soonn, name: "Coming Soon", detail: "Will be added on works on under Construction" },
-    { id: 2, logo: soonn, name: "Coming Soon", detail: "Will be added on works on under Construction" },
-    { id: 3, logo: soonn, name: "Coming Soon", detail: "Will be added on works on under Construction" },
-    { id: 4, logo: soonn, name: "Coming Soon", detail: "Will be added on works on under Construction" },
-    { id: 5, logo: soonn, name: "Coming Soon", detail: "Will be added on works on under Construction" }
+    { 
+      id: 1, 
+      golink:"https://spotify-clone-byarun.vercel.app/",
+      logo: spotify, 
+      name: "Spotify Clone", 
+      detail: "Made with react+tailwind",
+      link: "https://github.com/arunmeenaa/SpotifyClone" 
+    },
+    // { 
+    //   id: 2, 
+    //   logo: soonn, 
+    //   name: "Coming Soon", 
+    //   detail: "Will be added on works on under Construction",
+    //   // link: ""
+    // },
+    // { 
+    //   id: 3, 
+    //   logo: soonn, 
+    //   name: "Coming Soon", 
+    //   detail: "Will be added on works on under Construction",
+    //   // link: ""
+    // },
+    // { 
+    //   id: 4, 
+    //   logo: soonn, 
+    //   name: "Coming Soon", 
+    //   detail: "Will be added on works on under Construction",
+    //   // link: ""
+    // },
+    // { 
+    //   id: 5, 
+    //   logo: soonn, 
+    //   name: "Coming Soon", 
+    //   detail: "Will be added on works on under Construction",
+    //   // link: ""
+    // }
   ];
 
   return (
@@ -28,7 +60,7 @@ function Project() {
 
       <div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-3 my-5 justify-items-center">
-          {cardItem.map(({ id, logo, name, detail }) => (
+          {cardItem.map(({ id, logo, name, detail, link ,golink }) => (
             <motion.div
               key={id}
               className="w-full sm:w-64 md:w-[300px] h-auto md:h-[300px] border-[2px] rounded-lg shadow-lg p-2 cursor-pointer hover:scale-105 duration-300 flex flex-col items-center"
@@ -51,18 +83,24 @@ function Project() {
                 <p className="px-2 text-gray-700 text-sm sm:text-base">{detail}</p>
               </div>
               <div className="px-2 sm:px-6 py-4 flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center w-full">
-                <motion.button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded w-full sm:w-auto"
+              <motion.a
+                  href={golink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 hover:bg-green-800 text-white font-bold px-4 py-2 rounded w-full sm:w-auto text-center"
                   whileTap={{ scale: 0.9 }}
                 >
-                  Video
-                </motion.button>
-                <motion.button
-                  className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded w-full sm:w-auto"
+                  Try
+                </motion.a>
+                <motion.a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-500 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded w-full sm:w-auto text-center"
                   whileTap={{ scale: 0.9 }}
                 >
                   Source code
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           ))}
