@@ -6,13 +6,16 @@ function Home() {
       id="home"
       className="flex flex-col md:flex-row gap-10 md:gap-72 pt-20 pb-20 md:pb-72 lg:pr-32"
     >
-      <div className="font-montserrat flex-1">
-        <div className="flex font-bold pt-16 pl-4 md:pl-16">Welcome In My Feed</div>
-        <div className="pl-4 md:pl-16 pt-1 font-bold text-3xl flex flex-wrap">
-          Hello, I'm a <span className="text-green-500"> Developer!</span>
+      
+      <div className="font-montserrat flex-1 items-center md:items-start text-center md:text-left">
+        <div className="flex font-bold pt-16 justify-center md:justify-start md:pl-16">
+          Welcome In My Feed
+        </div>
+        <div className="pt-1 font-bold text-3xl flex flex-wrap justify-center md:justify-start md:pl-16">
+          Hello, I'm a <span className="text-green-500">&nbsp;Developer!</span>
         </div>
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-[650px] text-sm pl-4 md:pl-16 pt-8">
+          <div className="w-full md:w-[650px] text-sm pt-8 px-4 md:px-0 md:pl-16">
             Hello, I'm Arun, a passionate Web developer with a keen eye for MERN
             Stack. With a background in IT, I strive to create impactful and
             visually stunning software solutions that leave a lasting
@@ -20,11 +23,13 @@ function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-10 md:gap-36 pt-12 md:pt-28">
+       
+        <div className="flex flex-col md:flex-row gap-10 md:gap-36 pt-12 md:pt-28 items-center md:items-start">
           
-          <div className="font-bold text-xl pl-8 md:pl-16">
-            <div className="pl-4">Available on</div>
-            <div className="flex flex-wrap pt-2 gap-3">
+          
+          <div className="font-bold text-xl lg:pl-16 text-center md:text-left">
+            <div>Available on</div>
+            <div className="flex flex-wrap justify-center md:justify-start pt-2 gap-3">
               <a
                 href="https://www.linkedin.com/in/arunmeena0312"
                 target="_blank"
@@ -66,11 +71,10 @@ function Home() {
             </div>
           </div>
 
-          
-          <div className="font-bold text-xl pl-4 md:pl-6 pt-1">
+         
+          <div className="font-bold text-xl text-center md:text-left">
             Currently working on
-            
-            <div className="flex flex-wrap pt-2 pl-6  gap-3">
+            <div className="flex flex-wrap justify-center md:justify-start pt-2 gap-3">
               <img className="cursor-pointer w-8 h-8" src="/mongodb.png" alt="mongodb" />
               <img className="cursor-pointer w-8 h-8" src="/expressjs.svg" alt="express" />
               <img className="cursor-pointer w-8 h-8" src="/reactt.png" alt="react" />
@@ -80,7 +84,7 @@ function Home() {
         </div>
       </div>
 
-     
+      
       <div className="flex justify-center md:justify-end pt-10 md:pt-20">
         <img
           className="rounded-full w-64 h-64 md:w-[400px] md:h-[375px] object-cover"
@@ -88,7 +92,6 @@ function Home() {
           alt=""
         />
       </div>
-
     </div>
   );
 }
