@@ -87,6 +87,7 @@ function Home() {
           alt=""
         />
       </div>
+      
     </div>
   );
 }
