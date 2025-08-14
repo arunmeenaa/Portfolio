@@ -69,6 +69,7 @@ function Home() {
           
           <div className="font-bold text-xl pl-4 md:pl-6 pt-1">
             Currently working on
+            
             <div className="flex flex-wrap pt-2 pl-6  gap-3">
               <img className="cursor-pointer w-8 h-8" src="/mongodb.png" alt="mongodb" />
               <img className="cursor-pointer w-8 h-8" src="/expressjs.svg" alt="express" />
@@ -87,7 +88,7 @@ function Home() {
           alt=""
         />
       </div>
-      
+
     </div>
   );
 }
