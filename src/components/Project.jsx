@@ -1,6 +1,6 @@
 import React from "react";
 import soonn from "../../public/soonn.png";
-import supply from "../../public/supplyy.png"
+import supply from "/supplyy.png"
 import spotify from "../../public/favicon.ico";
 import { motion } from "framer-motion";
 
