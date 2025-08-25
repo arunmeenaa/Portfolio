@@ -1,5 +1,6 @@
 import React from "react";
 import soonn from "../../public/soonn.png";
+import supply from "../../public/supplyy.png"
 import spotify from "../../public/favicon.ico";
 import { motion } from "framer-motion";
 
@@ -13,13 +14,14 @@ function Project() {
       detail: "Made with react+tailwind",
       link: "https://github.com/arunmeenaa/SpotifyClone" 
     },
-    // { 
-    //   id: 2, 
-    //   logo: soonn, 
-    //   name: "Coming Soon", 
-    //   detail: "Will be added on works on under Construction",
-    //   // link: ""
-    // },
+    { 
+      id: 2, 
+      golink:"https://supply-chain-gilt.vercel.app/",
+      logo:supply , 
+      name: "Supply Chain Management", 
+      detail: "It is the network of people, processes, and organizations involved in moving goods or services from suppliers to customers",
+      link: "https://github.com/arunmeenaa/Supply-Chain"
+    },
     // { 
     //   id: 3, 
     //   logo: soonn, 
