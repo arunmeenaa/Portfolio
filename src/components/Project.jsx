@@ -1,114 +1,155 @@
 import React from "react";
-import soonn from "../../public/soonn.png";
-import supply from "/supplyy.png"
-import spotify from "../../public/favicon.ico";
 import { motion } from "framer-motion";
+import { ExternalLink, FolderCode } from "lucide-react";
+
+
+import supply from "/supplyy.png";
+
+import helpNet from "/helpNet.png"
 
 function Project() {
   const cardItem = [
-    { 
-      id: 1, 
-      golink:"https://spotify-clone-byarun.vercel.app/",
-      logo: spotify, 
-      name: "Spotify Clone", 
-      detail: "Made with react+tailwind",
-      link: "https://github.com/arunmeenaa/SpotifyClone" 
+   
+
+    {
+      id: 1,
+      golink: "https://supply-chain-gilt.vercel.app/",
+      logo: supply,
+      name: "Supply Chain Management",
+      detail:
+        "A web-based supply chain management platform designed to streamline the movement of goods, suppliers, and customer operations efficiently.",
+      tech: ["React", "Node.js", "MongoDB"],
+      link: "https://github.com/arunmeenaa/Supply-Chain",
     },
-    { 
-      id: 2, 
-      golink:"https://supply-chain-gilt.vercel.app/",
-      logo:supply , 
-      name: "Supply Chain Management", 
-      detail: "It is the network of people, processes, and organizations involved in moving goods or services from suppliers to customers",
-      link: "https://github.com/arunmeenaa/Supply-Chain"
+
+    {
+      id: 2,
+      golink: "https://help-net-chi.vercel.app/",
+      logo: helpNet,
+      name: "HelpNet",
+      detail:
+        "HelpNet is a community-driven web application designed to connect apartment complex residents for mutual assistance, allowing neighbors to post and fulfill local requests or help offers.",
+      tech: ["React", "Node.js", "MongoDB"],
+      link: "https://github.com/arunmeenaa/helpNet",
     },
-    // { 
-    //   id: 3, 
-    //   logo: soonn, 
-    //   name: "Coming Soon", 
-    //   detail: "Will be added on works on under Construction",
-    //   // link: ""
-    // },
-    // { 
-    //   id: 4, 
-    //   logo: soonn, 
-    //   name: "Coming Soon", 
-    //   detail: "Will be added on works on under Construction",
-    //   // link: ""
-    // },
-    // { 
-    //   id: 5, 
-    //   logo: soonn, 
-    //   name: "Coming Soon", 
-    //   detail: "Will be added on works on under Construction",
-    //   // link: ""
-    // }
   ];
 
   return (
-    <div
+    <section
       id="project"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10 pt-16"
+      className="bg-black text-white py-24 px-4 md:px-10 lg:px-20 font-montserrat"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <h1 className="text-3xl font-bold mb-5">Project</h1>
-        <span className="underline font-semibold">Featured Projects</span>
-      </motion.div>
+      <div className="max-w-7xl mx-auto">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <p className="text-green-500 uppercase tracking-widest font-semibold mb-3">
+            My Work
+          </p>
 
-      <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-3 my-5 justify-items-center">
-          {cardItem.map(({ id, logo, name, detail, link ,golink }) => (
-            <motion.div
-              key={id}
-              className="w-full sm:w-64 md:w-[300px] h-auto md:h-[300px] border-[2px] rounded-lg shadow-lg p-2 cursor-pointer hover:scale-105 duration-300 flex flex-col items-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <motion.img
-                src={logo}
-                className="w-24 h-24 sm:w-28 sm:h-28 md:w-[120px] md:h-[120px] p-1 rounded-full border-[2px]"
-                alt=""
-                initial={{ rotate: -5 }}
-                whileHover={{ rotate: 5 }}
-                transition={{ duration: 0.3 }}
-              />
-              <div className="text-center w-full">
-                <div className="px-2 font-bold text-xl mb-2">{name}</div>
-                <p className="px-2 text-gray-700 text-sm sm:text-base">{detail}</p>
-              </div>
-              <div className="px-2 sm:px-6 py-4 flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center w-full">
-              <motion.a
-                  href={golink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-500 hover:bg-green-800 text-white font-bold px-4 py-2 rounded w-full sm:w-auto text-center"
-                  whileTap={{ scale: 0.9 }}
-                >
-                  Try
-                </motion.a>
-                <motion.a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded w-full sm:w-auto text-center"
-                  whileTap={{ scale: 0.9 }}
-                >
-                  Source code
-                </motion.a>
-              </div>
-            </motion.div>
-          ))}
+          <h1 className="text-4xl md:text-5xl font-bold mb-5">
+            Featured <span className="text-green-500">Projects</span>
+          </h1>
+
+          <p className="text-zinc-400 text-lg max-w-3xl leading-8">
+            Here are some of the projects I’ve built using modern web
+            technologies. These projects reflect my skills in frontend
+            development, backend integration, and responsive UI design.
+          </p>
+
+          <div className="w-24 h-1 bg-green-500 rounded-full mt-6"></div>
+        </motion.div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {cardItem.map(
+            ({ id, logo, name, detail, link, golink, tech }, index) => (
+              <motion.div
+                key={id}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -8 }}
+                className="group bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-green-500/40 transition-all duration-300 shadow-2xl"
+              >
+                {/* Image Section */}
+                <div className="relative overflow-hidden">
+                  <div className="absolute top-4 right-4 z-10 bg-black/70 backdrop-blur-md p-3 rounded-2xl border border-zinc-700">
+                    <FolderCode className="text-green-500" size={20} />
+                  </div>
+
+                  <img
+                    src={logo}
+                    alt={name}
+                    className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                </div>
+
+                {/* Content */}
+                <div className="p-7">
+                  <h2 className="text-2xl font-bold mb-4">
+                    {name}
+                  </h2>
+
+                  <p className="text-zinc-400 leading-7 text-sm md:text-base mb-6">
+                    {detail}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {tech.map((item, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-sm text-zinc-300 hover:border-green-500 hover:text-green-400 transition-all duration-300"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <motion.a
+                      href={golink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 bg-green-500 hover:bg-green-400 text-black font-semibold py-3 rounded-2xl flex items-center justify-center gap-2 transition-all duration-300"
+                    >
+                      Live Demo
+                      <ExternalLink size={18} />
+                    </motion.a>
+
+                    <motion.a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 border border-zinc-700 hover:border-green-500 text-white hover:text-green-400 py-3 rounded-2xl flex items-center justify-center gap-2 transition-all duration-300"
+                    >
+                      Source Code
+                     <img
+  src="/github.svg"
+  alt="GitHub"
+  className="w-4 h-4 object-contain invert"
+/>
+                    </motion.a>
+                  </div>
+                </div>
+              </motion.div>
+            )
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

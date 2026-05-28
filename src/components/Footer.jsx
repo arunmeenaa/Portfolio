@@ -1,72 +1,116 @@
-import React from 'react'
+import React from "react";
+import {
+  Send,
+  MessageCircle,
+  Heart,
+} from "lucide-react";
 
 function Footer() {
+  const socialLinks = [
+   {
+  id: 1,
+  icon: (
+    <img
+      src="/ig.svg"
+      alt="Instagram"
+      className="w-5 h-5 object-contain invert"
+    />
+  ),
+  link: "https://www.instagram.com/arunmeenaa___?igsh=MXIycmxwbHU2ZnZuMw==",
+  name: "Instagram",
+},
+    {
+    id: 2,
+    icon: (
+      <img
+        src="/tg.svg"
+        alt="Telegram"
+        className="w-5 h-5 object-contain invert"
+      />
+    ),
+    link: "https://t.me/arunmeena_17",
+    name: "Telegram",
+  },
+
+  {
+    id: 3,
+    icon: (
+      <img
+        src="/wp.svg"
+        alt="WhatsApp"
+        className="w-5 h-5 object-contain invert"
+      />
+    ),
+    link: "https://wa.me/",
+    name: "WhatsApp",
+  },
+   {
+  id: 4,
+  icon: (
+    <img
+      src="/lkdn.svg"
+      alt="LinkedIn"
+      className="w-5 h-5 object-contain invert"
+    />
+  ),
+  link: "https://www.linkedin.com/in/arunmeena0312",
+  name: "LinkedIn",
+},
+  ];
+
   return (
-    <>
-      <div className='flex justify-center pt-16 px-4 md:px-14'>
-        <div className="flex pt-2 flex-row gap-3">
-          <div>
-            <a
-              href="https://www.instagram.com/arunmeenaa___?igsh=MXIycmxwbHU2ZnZuMw=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="cursor-pointer w-7 h-7 hover:scale-110"
-                src="/ig.svg"
-                alt="instagram"
-              />
-            </a>
+    <footer className="bg-black text-white border-t border-zinc-800 mt-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-12">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Left */}
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-bold">
+              Arun <span className="text-green-500">Meena</span>
+            </h2>
+
+            <p className="text-zinc-400 mt-3 max-w-md leading-7">
+              Passionate MERN Stack Developer focused on building responsive,
+              modern, and user-friendly web applications.
+            </p>
           </div>
-          <div>
-            <a
-              href="https://t.me/arunmeena_17"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="cursor-pointer w-7 h-7 hover:scale-110"
-                src="/tg.svg"
-                alt="telegram"
-              />
-            </a>
-          </div>
-          <div>
-            <img
-              className="cursor-pointer w-7 h-7 hover:scale-110"
-              src="/wp.svg"
-              alt="whatsapp"
-            />
-          </div>
-          <div>
-            <a
-              href="https://www.linkedin.com/in/arunmeena0312"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="cursor-pointer w-7 h-7 hover:scale-110"
-                src="/lkdn.svg"
-                alt="linkedin"
-              />
-            </a>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
+            {socialLinks.map(({ id, icon, link, name }) => (
+              <a
+                key={id}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={name}
+                className="group p-4 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-green-500/50 hover:-translate-y-1 transition-all duration-300"
+              >
+                <span className="text-zinc-300 group-hover:text-green-500 transition-colors duration-300">
+                  {icon}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
-      </div>
 
-      <div className='w-full flex justify-center pt-2'>
-        <span className='text-gray-300 text-sm md:text-base'>_______________________________</span>
-      </div>
+        {/* Divider */}
+        <div className="w-full h-[1px] bg-zinc-800 my-10"></div>
 
-      <div className='pt-7 text-center flex justify-center px-4 md:px-0 pb-10'>
-        <span className='flex flex-col text-sm md:text-base'>
-          © 2025 All Right Reserved
-          <br />
-          Arun Meena
-        </span>
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-400">
+          <p>
+            © 2026 Arun Meena. All rights reserved.
+          </p>
+
+          <p className="flex items-center gap-2">
+            Built with <Heart size={16} className="text-green-500" /> using
+            React & Tailwind CSS
+          </p>
+        </div>
       </div>
-    </>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
