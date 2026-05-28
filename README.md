@@ -1,12 +1,115 @@
-# React + Vite
+# Arun Meena - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive personal portfolio website built using React, Tailwind CSS, and Framer Motion. This portfolio showcases my projects, skills, experience, and contact information with a clean modern UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 https://your-portfolio-link.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Features
+
+- Modern Responsive UI
+- Animated Components using Framer Motion
+- Project Showcase Section
+- Skills & Experience Section
+- Resume View & Download
+- Contact Form Integration
+- Social Media Links
+- Mobile Responsive Navbar
+- Smooth Scrolling
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Tailwind CSS
+- Framer Motion
+
+### Backend / Services
+- GetForm.io (Contact Form API)
+
+### Deployment
+- Vercel
+
+---
+
+## 📂 Folder Structure
+
+```bash
+src/
+│
+├── Components/
+│   ├── About.jsx
+│   ├── Experience.jsx
+│   ├── Footer.jsx
+│   ├── Form.jsx
+│   ├── Home.jsx
+│   ├── Navbar.jsx
+│   └── Project.jsx
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/arunmeenaa/Portfolio.git
+```
+
+Go to project folder:
+
+```bash
+cd Portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+---
+
+
+## 🔗 Social Links
+
+- LinkedIn: https://www.linkedin.com/in/arunmeena0312
+- Instagram: https://www.instagram.com/arunmeenaa___
+- Telegram: https://t.me/arunmeena_17
+- GitHub: https://github.com/arunmeenaa
+
+---
+
+## 📄 Resume
+
+Resume is available directly from the portfolio website.
+
+---
+
+## 👨‍💻 Author
+
+### Arun Meena
+MERN Stack Developer
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
