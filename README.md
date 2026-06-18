@@ -6,7 +6,7 @@ A modern and responsive personal portfolio website built using React, Tailwind C
 
 ## 🚀 Live Demo
 
-🔗 https://your-portfolio-link.vercel.app/
+🔗 (https://arunsportfolioo.netlify.app/)
 
 ---
 
