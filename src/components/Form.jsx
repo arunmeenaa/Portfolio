@@ -73,7 +73,7 @@ function Form() {
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
                   <p className="text-zinc-400 text-sm">
-                    arunmeena0312@example.com
+                    meenaarun738@gmail.com
                   </p>
                 </div>
               </div>
